@@ -20,18 +20,43 @@ class StepFour extends Component {
 
 	render() {
 		return (
-			<div>
-				<h1 className="ui centered">Did you experience these symptoms in the past 14 days after traveling /
-					exposure?</h1>
-				<ul>
+			<div className="col-sm-12 col-md-8 offset-md-2">
+				<div className="progress-status text-center my-5">
+					<h4 className="mb-3">Please answer the question below</h4>
+					<div className="prog prog-filled"></div>
+				</div>
+				{/* <div className="progress-status text-center my-5" role="progressbar" aria-valuenow="20%">
+					<h4 className="mb-3">Please answer the question below</h4>
+					<div className="prog prog-filled"></div>
+					<div className="prog prog-empty"></div>
+					<div className="prog prog-empty"></div>
+					<div className="prog prog-empty"></div>
+					<div className="prog prog-empty"></div>
+				</div> */}
+				<p className="question-text">
+					Did you experience these symptoms in the past 14 days after traveling /
+					exposure?
+				</p>
+
+				<ul className="question-ul" role="list">
 					<li>Fever</li>
 					<li>Cough</li>
 					<li>Shortness of breath or difficulty breathing</li>
 					<li>Diarrhea</li>
 				</ul>
-				<Button onClick={this.noStep} className="btn btn-primary btn-lg btn-block" role="button">NO</Button>
-				<Button onClick={this.yesStep} className="btn btn-primary btn-lg btn-block" role="button">YES</Button>
-				<Button onClick={this.back} className="btn btn-primary btn-lg btn-block" role="button">BACK</Button>
+				<div className="row mt-5">
+					<div className="col-sm-12 col-md-6 my-2">
+						<Button onClick={this.noStep} className="btn btn-primary btn-lg btn-block"
+								role="button">NO</Button>
+					</div>
+					<div className="col-sm-12 col-md-6 my-2">
+						<Button onClick={this.yesStep} className="btn btn-primary btn-lg btn-block"
+								role="button">YES</Button>
+					</div>
+					<div className="col-sm-12 mt-5 pt-5 text-center btn-back">
+						<Button onClick={this.back} className="btn btn-secondary btn-lg" role="button">Previous Question</Button>
+					</div>
+				</div>
 			</div>
 		)
 	}

@@ -34,40 +34,35 @@ class StepZero extends Component {
 					<p className="mt-3">This is also available in <a href="#" role="link">Tagalog</a>, more regional
 						languages will be available soon.</p>
 				</div>
-				<p>
-					If you have no symptoms or exposure concerns, but have questions about COVID-19 or novel
-					coronavirus, please visit the following resources:
-				</p>
 				<div>
 					<p>If you have no symptoms or exposure concerns, but have questions about COVID-19 or novel
 						coronavirus,
 						please visit the following resources:</p>
 					<ul>
-						<li><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">World Health
+						<li><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" role="link">World Health
 							Organization</a> – World Health
 							Organization’s official webpage regarding COVID-19
 						</li>
-						<li><a href="https://www.doh.gov.ph/2019-nCoV">Department of Health</a> – Learn about
+						<li><a href="https://www.doh.gov.ph/2019-nCoV" role="link">Department of Health</a> – Learn about
 							COVID-19
 							and actions being taken to protect the health of Filipinos
 						</li>
 						<li>Department of Health’s official social media channels:
 							<ul>
-								<li><a href="https://www.facebook.com/OfficialDOHgov">Facebook</a></li>
-								<li><a href="https://twitter.com/DOHgovph">Twitter</a></li>
-								<li><a href="http://bit.ly/DOHPhCOVID-19">Viber</a></li>
+								<li><a href="https://www.facebook.com/OfficialDOHgov" role="link">Facebook</a></li>
+								<li><a href="https://twitter.com/DOHgovph" role="link">Twitter</a></li>
+								<li><a href="http://bit.ly/DOHPhCOVID-19" role="link">Viber</a></li>
 							</ul>
 						</li>
 						<li><a href="#">Frequently Asked Questions</a></li>
 					</ul>
 				</div>
 				<br/>
-				<p><strong>Disclaimer:</strong> Information on this website is adapted from DOH <a
-					href="https://www.doh.gov.ph/2019-nCov/interim-guidelines">guidelines</a> for triaging COVID-19
+				<p><strong>Disclaimer:</strong> Information on this website is adapted from <a href="https://www.doh.gov.ph/2019-nCov/interim-guidelines" role="link">DOH guidelines</a> for triaging COVID-19
 					cases. This web site is not endorsed by, directly affiliated with, maintained, authorized, or
 					sponsored by the Department of Health. We do not provide professional
 					medical advice. If you find any errors or inaccuracies on this website, please submit feedback to
-					our <a href="https://t.me/joinchat/EBf1xxafyu8E3Io4BlbjQg">Telegram</a> channel.</p>
+					our <a href="https://t.me/joinchat/EBf1xxafyu8E3Io4BlbjQg" role="link">Telegram</a> channel.</p>
 			</div>
 		)
 	}

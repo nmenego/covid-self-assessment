@@ -47,6 +47,7 @@ a:hover {
   border-width: 2px;
   padding: 16px 32px;
   color: #033092;
+  background-color: #FFF;
 }
 
 .btn-secondary:hover {
@@ -55,6 +56,10 @@ a:hover {
   border-width: 2px;
   padding: 16px 32px;
   background-color: #003FC9;
+}
+
+.btn-back {
+  width: 280px;
 }
 
 .App {

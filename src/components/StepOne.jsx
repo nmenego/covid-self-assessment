@@ -17,14 +17,18 @@ class StepOne extends Component {
 	render() {
 		return (
 			<div className="col-sm-12 col-md-8 offset-md-2">
-				<div className="progress-status text-center my-5" role="progressbar" aria-valuenow="20%">
+				<div className="progress-status text-center my-5">
+					<h4 className="mb-3">Please answer the question below</h4>
+					<div className="prog prog-filled"></div>
+				</div>
+				{/* <div className="progress-status text-center my-5" role="progressbar" aria-valuenow="20%">
 					<h4 className="mb-3">Question 1 of 5</h4>
 					<div className="prog prog-filled"></div>
 					<div className="prog prog-empty"></div>
 					<div className="prog prog-empty"></div>
 					<div className="prog prog-empty"></div>
 					<div className="prog prog-empty"></div>
-				</div>
+				</div> */}
 
 				{/*</div>*/}
 				<p className="question-text">Are you experiencing any of the following:</p>
