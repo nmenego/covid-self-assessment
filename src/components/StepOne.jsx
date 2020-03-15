@@ -1,23 +1,22 @@
 // StepOne.jsx
 import React, {Component} from 'react';
-import {Button, Form} from 'semantic-ui-react';
+import {Button} from 'semantic-ui-react';
 
 class StepOne extends Component {
 
 	yesStep = (e) => {
 		e.preventDefault()
-		this.props.emergencyStep()
+		this.props.yesStep()
 	}
 
 	noStep = (e) => {
 		e.preventDefault()
-		this.props.nextStep()
+		this.props.noStep()
 	}
 
 	render() {
-		const {values} = this.props;
 		return (
-			<Form>
+			<div>
 				<div className="col-sm-12 col-md-8 offset-md-2">
 					<div className="progress-status text-center my-5" role="progressbar" aria-valuenow="20%" >
 						<h4 className="mb-3">Question 1 of 5</h4>
@@ -38,10 +37,10 @@ class StepOne extends Component {
 					{/*	<label>severe difficulty breathing (e.g., struggling for each breath, speaking in single words)</label>*/}
 					{/*</Form.Field>*/}
 					<ul className="question-ul" role="list">
-						<li>Fever</li>
-						<li>Cough</li>
-						<li>Shortness of breath or difficulty breathing</li>
-						<li>Diarrhea</li>
+            <li>Fever</li>
+            <li>Cough</li>
+            <li>Shortness of breath or difficulty breathing</li>
+            <li>Diarrhea</li>
 					</ul>
 					<div className="row mt-5">
 						<div className="col-sm-12 col-md-6 my-2">
@@ -52,7 +51,7 @@ class StepOne extends Component {
 						</div>
 					</div>
 				</div>
-			</Form>
+			</div>
 		)
 	}
 }

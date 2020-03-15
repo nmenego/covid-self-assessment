@@ -3,9 +3,14 @@ import React, {Component} from 'react';
 import {Button} from 'semantic-ui-react';
 
 class StepThree extends Component {
-	continue = (e) => {
-		e.preventDefault();
-		this.props.nextStep();
+	yesStep = (e) => {
+		e.preventDefault()
+		this.props.yesStep()
+	}
+
+	noStep = (e) => {
+		e.preventDefault()
+		this.props.noStep()
 	}
 
 	back = (e) => {
@@ -14,19 +19,17 @@ class StepThree extends Component {
 	}
 
 	render() {
-		const {values: {firstName, lastName, email, age, city, country}} = this.props;
-
 		return (
 			<div>
-				<h1 className="ui centered">Are you experiencing any of the following:</h1>
+				<h1 className="ui centered">Were you exposed to someone who has been confirmed as having COVID-19?</h1>
 				<ul>
-					<li>fever</li>
-					<li>cough</li>
-					<li>shortness of breath</li>
-					<li>sore throat</li>
+					<li>Providing direct care for COVID-19 patient</li>
+					<li>Working together or staying in the same close environment of a COVID-19</li>
+					<li>Traveling together with COVID-19 patient in any kind of conveyance</li>
+					<li>Living in the same household as a COVID-19 patient</li>
 				</ul>
-				<Button onClick={this.continue}>No</Button>
-				<Button onClick={this.yesEmergency}>Yes</Button>
+				<Button onClick={this.noStep}>No</Button>
+				<Button onClick={this.yesStep}>Yes</Button>
 				<Button onClick={this.back}>Back</Button>
 			</div>
 		)

@@ -1,6 +1,6 @@
 // StepZero.jsx
 import React, {Component} from 'react';
-import {Button, Form} from 'semantic-ui-react';
+import {Button} from 'semantic-ui-react';
 
 class StepZero extends Component {
 
@@ -12,7 +12,7 @@ class StepZero extends Component {
 	render() {
 		const { values } = this.props;
 		return (
-			<Form>
+			<div>
 				<div className="col-sm-12 col-md-10 offset-md-1">
 					<h1 className="text-center mt-5 mb-4">COVID-19 Self-Assessment</h1>
 					<br/>
@@ -31,32 +31,29 @@ class StepZero extends Component {
 					</div>
 					<p>
 						If you have no symptoms or exposure concerns, but have questions about COVID-19 or novel coronavirus, please visit the following resources:
-					</p>
-						<ul>
-							<li>
-								<a href="https://www.doh.gov.ph/2019-nCoV" role="link">https://www.doh.gov.ph/2019-nCoV</a> – Learn about COVID-19 and actions being taken to protect the health of Filipinos
-							</li>
-							<li>
-								Department of Health’s official social media pages
-								<ul>
-									<li>
-										<a href="https://www.facebook.com/OfficialDOHgov" role="link">https://www.facebook.com/OfficialDOHgov</a>
-									</li>
-									<li>
-										<a href="https://twitter.com/DOHgovph" role="link">https://twitter.com/DOHgovph</a>
-									</li>
-									<li>
-										<a href="http://bit.ly/DOHPhCOVID-19" role="link">Viber</a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="https://www.doh.gov.ph/2019-nCoV" role="link">https://www.doh.gov.ph/2019-nCoV</a> – Learn about COVID-19 and actions being taken to protect the health of Filipinos
-							</li>
-							<li>
-								<a href="#" role="link">Frequently Asked Questions</a>
-							</li>
-						</ul>
+					</p>				
+          <div>
+					<p>If you have no symptoms or exposure concerns, but have questions about COVID-19 or novel
+						coronavirus,
+						please visit the following resources:</p>
+					<ul>
+						<li><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">World Health
+							Organization</a> – World Health
+							Organization’s official webpage regarding COVID-19
+						</li>
+						<li><a href="https://www.doh.gov.ph/2019-nCoV">Department of Health</a> – Learn about COVID-19
+							and actions being taken to protect the health of Filipinos
+						</li>
+						<li>Department of Health’s official social media channels:
+							<ul>
+								<li><a href="https://www.facebook.com/OfficialDOHgov"></a>Facebook</li>
+								<li><a href="https://twitter.com/DOHgovph"></a>Twitter</li>
+								<li><a href="http://bit.ly/DOHPhCOVID-19"></a>Viber</li>
+							</ul>
+						</li>
+						<li><a href="#">Frequently Asked Questions</a></li>
+					</ul>
+				</div>
 					<br/>
 					<p><strong>Disclaimer:</strong> (Let's not get sued!!!) Fusce facilisis sapien eros, vitae efficitur risus auctor ac. Ut
 						scelerisque tortor
@@ -64,7 +61,7 @@ class StepZero extends Component {
 						convallis tortor, eu tempor augue diam maximus purus. Cras convallis, massa in dignissim semper, sem
 						dolor elementum leo, vel posuere orci nunc in ligula.</p>
 				</div>
-			</Form>
+			</div>
 		)
 	}
 }
