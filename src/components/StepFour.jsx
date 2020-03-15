@@ -15,7 +15,7 @@ class StepFour extends Component {
 
 	back = (e) => {
 		e.preventDefault();
-		this.props.prevStep();
+		this.props.back();
 	}
 
 	render() {
