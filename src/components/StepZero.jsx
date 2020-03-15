@@ -31,8 +31,8 @@ class StepZero extends Component {
 				<div className="my-5 text-center">
 					<Button onClick={this.nextStep} className="btn btn-primary btn-lg" role="button">Launch
 						Self-Assessment</Button>
-					<p className="mt-3">This is also available in <a href="#" role="link">Tagalog</a>, more local
-						dialects will be available soon.</p>
+					<p className="mt-3">This is also available in <a href="#" role="link">Tagalog</a>, more regional
+						languages will be available soon.</p>
 				</div>
 				<p>
 					If you have no symptoms or exposure concerns, but have questions about COVID-19 or novel
