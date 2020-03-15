@@ -1,5 +1,6 @@
 // MainForm.jsx
 import React, {Component} from 'react';
+import StepZero from './StepZero';
 import StepOne from './StepOne';
 import StepTwo from './StepTwo';
 import StepThree from './StepThree';
@@ -8,17 +9,32 @@ import StepFive from "./StepFive";
 import StepSix from "./StepSix";
 import Success from './Success';
 import Emergency from './Emergency';
+import ContactPage from "./ContactPage";
 
 
 class MainForm extends Component {
 	state = {
-		step: 1,
+		step: 0,
 		firstName: '',
 		lastName: '',
 		email: '',
 		age: '',
 		city: '',
 		country: ''
+	}
+
+	initialState = () => {
+		const {step} = this.state
+		this.setState({
+			step: 0
+		})
+	}
+
+	contactPage = () => {
+		const {step} = this.state
+		this.setState({
+			step: 9
+		})
 	}
 
 	emergencyStep = () => {
@@ -51,6 +67,11 @@ class MainForm extends Component {
 		const {firstName, lastName, email, age, city, country} = this.state;
 		const values = {firstName, lastName, email, age, city, country};
 		switch (step) {
+			case 0:
+				return <StepZero
+					nextStep={this.nextStep}
+					values={values}
+				/>
 			case 1:
 				return <StepOne
 					nextStep={this.nextStep}
@@ -96,8 +117,14 @@ class MainForm extends Component {
 				/>
 			case 8:
 				return <Success/>
+			case 9:
+				return <ContactPage
+					next={this.contactPage}
+				/>
 			case 10:
-				return <Emergency/>
+				return <Emergency
+					next={this.initialState}
+				/>
 			default:
 				return <Emergency/>
 		}

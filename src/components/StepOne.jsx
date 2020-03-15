@@ -4,12 +4,12 @@ import {Button, Form} from 'semantic-ui-react';
 
 class StepOne extends Component {
 
-	yesEmergency = (e) => {
+	yesStep = (e) => {
 		e.preventDefault()
 		this.props.emergencyStep()
 	}
 
-	continue = (e) => {
+	noStep = (e) => {
 		e.preventDefault()
 		this.props.nextStep()
 	}
@@ -34,8 +34,8 @@ class StepOne extends Component {
 					<li>feeling confused</li>
 					<li>lost consciousness</li>
 				</ul>
-				<Button onClick={this.continue}>No</Button>
-				<Button onClick={this.yesEmergency}>Yes</Button>
+				<Button onClick={this.noStep}>No</Button>
+				<Button onClick={this.yesStep}>Yes</Button>
 			</Form>
 		)
 	}
