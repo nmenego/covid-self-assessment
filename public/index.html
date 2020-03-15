@@ -9,6 +9,9 @@
             name="description"
             content="Web site created using create-react-app"
     />
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Playfair+Display:700&display=swap" rel="stylesheet">
+
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png"/>
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -47,11 +50,26 @@
         </div>
     </div>
 </nav>
-<div id="root"></div>
-
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div id="root" class="py-3 mb-5"></div>
+        </div>
+    </div>
+</div>
 <!-- Footer -->
-<footer class="page-footer font-small blue pt-4">
-    <div class="footer-copyright text-center py-3">© 2020 Copyright</div>
+<footer class="page-footer footer font-small blue py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="footer-copyright text-left">© 2020 Copyright</div>
+            </div>
+            <div class="col-6 text-right">
+                <a class="footer-link mx-2" href="#">Privacy Policy</a>
+                <a class="footer-link mx-2" href="#">Terms of Service</a>
+            </div>
+        </div>
+    </div>
 </footer>
 <!-- Footer -->
 </body>

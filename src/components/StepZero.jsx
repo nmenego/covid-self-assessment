@@ -10,25 +10,29 @@ class StepZero extends Component {
 	}
 
 	render() {
-		const {values} = this.props;
+		const { values } = this.props;
 		return (
 			<div>
-				<h1 className="ui centered">COVID-19 Self-assessment for Philippines</h1>
-				<div>
-					<p>Check if you need to be tested for COVID-19. You can also help others use this tool if they are
-						not
-						able. </p>
-					<p>DOH strongly urges anyone who has symptoms, including a cough, runny nose, fever or sore throat,
-						to <a
-							href="https://www.doh.gov.ph/sites/default/files/health-update/DM-Interim%20Guidelines%20for%20Home%20Quarantine.pdf">self-isolate</a> for
-						14 days.</p>
-					<p>To protect yourself while out in public, wash your hands frequently, and maintain a distance of
-						about
-						2 metres from others.</p>
-					<Button onClick={this.nextStep}>Launch Self-Assessment</Button>
-				</div>
-
-				<div>
+				<div className="col-sm-12 col-md-10 offset-md-1">
+					<h1 className="text-center mt-5 mb-4">COVID-19 Self-Assessment</h1>
+					<br/>
+					<p>
+						Check if you need to be tested for COVID-19. You can also help others use this tool if they are not able
+					</p>
+					<p>
+						DOH strongly urges anyone who has symptoms, including a cough, runny nose, fever or sore throat, to self-isolate for 14 days.
+					</p>
+					<p>
+						To protect yourself while out in public, wash your hands frequently, and maintain a distance of about 2 metres from others.
+					</p>
+					<div className="my-5 text-center">
+						<Button onClick={this.nextStep} className="btn btn-primary btn-lg" role="button">Launch Self-Assessment</Button>
+						<p className="mt-3">This is also available in <a href="#" role="link">Tagalog</a>, more local dialects will be available soon.</p>
+					</div>
+					<p>
+						If you have no symptoms or exposure concerns, but have questions about COVID-19 or novel coronavirus, please visit the following resources:
+					</p>				
+          <div>
 					<p>If you have no symptoms or exposure concerns, but have questions about COVID-19 or novel
 						coronavirus,
 						please visit the following resources:</p>
@@ -50,17 +54,12 @@ class StepZero extends Component {
 						<li><a href="#">Frequently Asked Questions</a></li>
 					</ul>
 				</div>
-
-				<div>
-					<p>Disclaimer: Fusce facilisis sapien eros, vitae efficitur risus auctor ac.
-						Ut
+					<br/>
+					<p><strong>Disclaimer:</strong> (Let's not get sued!!!) Fusce facilisis sapien eros, vitae efficitur risus auctor ac. Ut
 						scelerisque tortor
 						velit, eu tempor ligula egestas eget. In vehicula, massa eget fermentum ultricies, magna metus
-						convallis tortor, eu tempor augue diam maximus purus. Cras convallis, massa in dignissim semper,
-						sem
+						convallis tortor, eu tempor augue diam maximus purus. Cras convallis, massa in dignissim semper, sem
 						dolor elementum leo, vel posuere orci nunc in ligula.</p>
-					<p>Please contact your local health authorities. We have a list of hospitals and LGUs that are here
-						to help answer your questions.</p>
 				</div>
 			</div>
 		)
