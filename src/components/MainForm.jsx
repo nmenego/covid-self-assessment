@@ -2,9 +2,13 @@
 import React, {Component} from 'react';
 import StepOne from './StepOne';
 import StepTwo from './StepTwo';
-import Confirmation from './Confirmation';
+import StepThree from './StepThree';
+import StepFour from "./StepFour";
+import StepFive from "./StepFive";
+import StepSix from "./StepSix";
 import Success from './Success';
 import Emergency from './Emergency';
+
 
 class MainForm extends Component {
 	state = {
@@ -63,12 +67,34 @@ class MainForm extends Component {
 					values={values}
 				/>
 			case 3:
-				return <Confirmation
+				return <StepThree
 					nextStep={this.nextStep}
 					prevStep={this.prevStep}
+					emergencyStep={this.emergencyStep}
 					values={values}
 				/>
 			case 4:
+				return <StepFour
+					nextStep={this.nextStep}
+					prevStep={this.prevStep}
+					emergencyStep={this.emergencyStep}
+					values={values}
+				/>
+			case 5:
+				return <StepFive
+					nextStep={this.nextStep}
+					prevStep={this.prevStep}
+					emergencyStep={this.emergencyStep}
+					values={values}
+				/>
+			case 6:
+				return <StepSix
+					nextStep={this.nextStep}
+					prevStep={this.prevStep}
+					emergencyStep={this.emergencyStep}
+					values={values}
+				/>
+			case 8:
 				return <Success/>
 			case 10:
 				return <Emergency/>
