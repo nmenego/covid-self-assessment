@@ -62,13 +62,12 @@ class StepZero extends Component {
 					</ul>
 				</div>
 				<br/>
-				<p><strong>Disclaimer:</strong> (Let's not get sued!!!) Fusce facilisis sapien eros, vitae efficitur
-					risus auctor ac. Ut
-					scelerisque tortor
-					velit, eu tempor ligula egestas eget. In vehicula, massa eget fermentum ultricies, magna metus
-					convallis tortor, eu tempor augue diam maximus purus. Cras convallis, massa in dignissim semper,
-					sem
-					dolor elementum leo, vel posuere orci nunc in ligula.</p>
+				<p><strong>Disclaimer:</strong> Information on this website is adapted from DOH <a
+					href="https://www.doh.gov.ph/2019-nCov/interim-guidelines">guidelines</a> for triaging COVID-19
+					cases. This web site is not endorsed by, directly affiliated with, maintained, authorized, or
+					sponsored by the Department of Health. We do not provide professional
+					medical advice. If you find any errors or inaccuracies on this website, please submit feedback to
+					our <a href="https://t.me/joinchat/EBf1xxafyu8E3Io4BlbjQg">Telegram</a> channel.</p>
 			</div>
 		)
 	}
