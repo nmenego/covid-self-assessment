@@ -24,7 +24,7 @@ class Emergency extends Component {
 					Area for admission or the Resuscitation Area of the hospital if you don’t want to be admitted.
 				</p>
 				<p>
-					**links that direct them to the nearest testing centers
+					[This part is under construction, please contact DOH directly below.]
 				</p>
 
 				<div className="my-5 text-center">
