@@ -67,6 +67,13 @@ class MainForm extends Component {
 		})
 	}
 
+	closeContactStep = () => {
+		const {step} = this.state
+		this.setState({
+			step: 6
+		})
+	}
+
 	preexistingIllnessStep = () => {
 		const {step} = this.state
 		this.setState({
@@ -153,15 +160,15 @@ class MainForm extends Component {
 			case 5: // pre-existing illness
 				return <StepFive
 					yesStep={this.emergencyStep}
-					noStep={this.preexistingIllnessStep}
+					noStep={this.closeContactStep}
 					back={this.prevStep}
 					values={values}
 				/>
-			case 6:
+			case 6: // close-contact
 				return <StepSix
-					nextStep={this.nextStep}
-					prevStep={this.prevStep}
-					emergencyStep={this.emergencyStep}
+					yesStep={this.emergencyStep}
+					noStep={this.noTestWithSymptomsStep}
+					back={this.prevStep}
 					values={values}
 				/>
 			case 95:

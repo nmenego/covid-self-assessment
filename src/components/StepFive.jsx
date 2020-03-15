@@ -23,9 +23,8 @@ class StepFive extends Component {
 		return (
 			<div>
 				<h1 className="ui centered">Do you have symptoms of respiratory illness?</h1>
-				<h2>Travel includes passing through an airport.</h2>
-				<Button onClick={this.continue}>No</Button>
-				<Button onClick={this.yesEmergency}>Yes</Button>
+				<Button onClick={this.noStep}>No</Button>
+				<Button onClick={this.yesStep}>Yes</Button>
 				<Button onClick={this.back}>Back</Button>
 			</div>
 		)
