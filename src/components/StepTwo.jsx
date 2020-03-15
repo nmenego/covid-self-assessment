@@ -21,12 +21,13 @@ class StepTwo extends Component {
 
 	render() {
 		return (
-			<div color='blue'>
-				<h1 className="ui centered">Have you travelled outside the country or to provinces that have confirmed COVID-19 cases?</h1>
+			<div className="col-sm-12 col-md-8 offset-md-2">
+				<h1 className="ui centered">Have you travelled outside the country or to provinces that have confirmed
+					COVID-19 cases?</h1>
 				<h2>Travel includes passing through an airport.</h2>
-				<Button onClick={this.noStep}>No</Button>
-				<Button onClick={this.yesStep}>Yes</Button>
-				<Button onClick={this.back}>Back</Button>
+				<Button onClick={this.noStep} className="btn btn-primary btn-lg btn-block" role="button">NO</Button>
+				<Button onClick={this.yesStep} className="btn btn-primary btn-lg btn-block" role="button">YES</Button>
+				<Button onClick={this.back} className="btn btn-primary btn-lg btn-block" role="button">BACK</Button>
 			</div>
 		)
 	}

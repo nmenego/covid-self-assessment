@@ -21,16 +21,17 @@ class StepFour extends Component {
 	render() {
 		return (
 			<div>
-				<h1 className="ui centered">Did you experience these symptoms in the past 14 days after traveling / exposure?</h1>
+				<h1 className="ui centered">Did you experience these symptoms in the past 14 days after traveling /
+					exposure?</h1>
 				<ul>
 					<li>Fever</li>
 					<li>Cough</li>
 					<li>Shortness of breath or difficulty breathing</li>
 					<li>Diarrhea</li>
 				</ul>
-				<Button onClick={this.noStep}>No</Button>
-				<Button onClick={this.yesStep}>Yes</Button>
-				<Button onClick={this.back}>Back</Button>
+				<Button onClick={this.noStep} className="btn btn-primary btn-lg btn-block" role="button">NO</Button>
+				<Button onClick={this.yesStep} className="btn btn-primary btn-lg btn-block" role="button">YES</Button>
+				<Button onClick={this.back} className="btn btn-primary btn-lg btn-block" role="button">BACK</Button>
 			</div>
 		)
 	}

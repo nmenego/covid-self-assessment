@@ -18,7 +18,8 @@ class ContactPage extends Component {
 					out to us at admin@covid19sa-ph.com</h3>
 				<h3>National Helplines</h3>
 				<div>Department of Health - Philippines</div>
-				<Button onClick={this.next}>See Contact Details</Button>
+				<Button onClick={this.next} className="btn btn-primary btn-lg btn-block" role="button">See Contact
+					Details</Button>
 			</div>
 		)
 	}

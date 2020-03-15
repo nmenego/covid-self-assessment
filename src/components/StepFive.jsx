@@ -23,9 +23,9 @@ class StepFive extends Component {
 		return (
 			<div>
 				<h1 className="ui centered">Do you have symptoms of respiratory illness?</h1>
-				<Button onClick={this.noStep}>No</Button>
-				<Button onClick={this.yesStep}>Yes</Button>
-				<Button onClick={this.back}>Back</Button>
+				<Button onClick={this.noStep} className="btn btn-primary btn-lg btn-block" role="button">NO</Button>
+				<Button onClick={this.yesStep} className="btn btn-primary btn-lg btn-block" role="button">YES</Button>
+				<Button onClick={this.back} className="btn btn-primary btn-lg btn-block" role="button">BACK</Button>
 			</div>
 		)
 	}

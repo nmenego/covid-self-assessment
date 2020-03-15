@@ -19,7 +19,8 @@ class NoTestWithSymptoms extends Component {
 				<p>To protect yourself while out in public, wash your hands frequently, and maintain a distance of about
 					2 metres from others.</p>
 				<p>If your symptoms worsen, or if you are concerned, go to [insert links]</p>
-				<Button onClick={this.next}>Restart Assessment</Button>
+				<Button onClick={this.next} className="btn btn-primary btn-lg btn-block" role="button">Restart
+					Assessment</Button>
 			</div>
 		)
 	}

@@ -19,7 +19,8 @@ class PersonUnderMonitoring extends Component {
 					and towels. Wash your hands often. If you have questions, visit [link].</p>
 				<p>If you get any COVID-19 symptoms, take this self-assessment again. If you need information, go to
 					[link].</p>
-				<Button onClick={this.next}>Restart Assessment</Button>
+				<Button onClick={this.next} className="btn btn-primary btn-lg btn-block" role="button">Restart
+					Assessment</Button>
 			</div>
 		)
 	}

@@ -28,9 +28,9 @@ class StepThree extends Component {
 					<li>Traveling together with COVID-19 patient in any kind of conveyance</li>
 					<li>Living in the same household as a COVID-19 patient</li>
 				</ul>
-				<Button onClick={this.noStep}>No</Button>
-				<Button onClick={this.yesStep}>Yes</Button>
-				<Button onClick={this.back}>Back</Button>
+				<Button onClick={this.noStep} className="btn btn-primary btn-lg btn-block" role="button">NO</Button>
+				<Button onClick={this.yesStep} className="btn btn-primary btn-lg btn-block" role="button">YES</Button>
+				<Button onClick={this.back} className="btn btn-primary btn-lg btn-block" role="button">BACK</Button>
 			</div>
 		)
 	}
