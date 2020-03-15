@@ -3,9 +3,14 @@ import React, {Component} from 'react';
 import {Button} from 'semantic-ui-react';
 
 class StepFive extends Component {
-	continue = (e) => {
-		e.preventDefault();
-		this.props.nextStep();
+	yesStep = (e) => {
+		e.preventDefault()
+		this.props.yesStep()
+	}
+
+	noStep = (e) => {
+		e.preventDefault()
+		this.props.noStep()
 	}
 
 	back = (e) => {
@@ -14,14 +19,12 @@ class StepFive extends Component {
 	}
 
 	render() {
-		const {values: {firstName, lastName, email, age, city, country}} = this.props;
 
 		return (
 			<div>
-				<h1 className="ui centered">In the past 14 days have you returned from travel to any other locations outside of Philippines?</h1>
-				<h2>Travel includes passing through an airport.</h2>
-				<Button onClick={this.continue}>No</Button>
-				<Button onClick={this.yesEmergency}>Yes</Button>
+				<h1 className="ui centered">Do you have symptoms of respiratory illness?</h1>
+				<Button onClick={this.noStep}>No</Button>
+				<Button onClick={this.yesStep}>Yes</Button>
 				<Button onClick={this.back}>Back</Button>
 			</div>
 		)

@@ -12,15 +12,11 @@ class Emergency extends Component {
 	render() {
 		return (
 			<div>
-				<h1 className="ui centered">Please contact your nearest emergency department.</h1>
-				<ul>
-					<li>Self-isolate. That means don't go to any public places, stay at home, and don’t have any
-						visitors. That means don't go to any public places, stay at home, and don’t have any visitors.
-					</li>
-					<li>Don’t share personal items like dishes, utensils, and towels and wash your hands often.</li>
-					<li>Avoid touching your face as much as possible.</li>
-				</ul>
-				<Button onClick={this.next}>Yes</Button>
+				<h1 className="ui centered">Call your nearest emergency department.</h1>
+				<p>They will ask more questions to assess you further. You will be brought to the COVID-19 Isolation
+					Area for admission or the Resuscitation Area of the hospital if you don’t want to be admitted.</p>
+				<p>**links that direct them to the nearest testing centers</p>
+				<Button onClick={this.next}>Restart Assessment</Button>
 			</div>
 		)
 	}

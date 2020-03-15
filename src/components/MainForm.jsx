@@ -7,9 +7,11 @@ import StepThree from './StepThree';
 import StepFour from "./StepFour";
 import StepFive from "./StepFive";
 import StepSix from "./StepSix";
-import Success from './Success';
+import PersonUnderMonitoring from './PersonUnderMonitoring';
 import Emergency from './Emergency';
 import ContactPage from "./ContactPage";
+import NoTest from "./NoTest";
+import NoTestWithSymptoms from "./NoTestWithSymptoms";
 
 
 class MainForm extends Component {
@@ -33,14 +35,70 @@ class MainForm extends Component {
 	contactPage = () => {
 		const {step} = this.state
 		this.setState({
-			step: 9
+			step: 98
 		})
 	}
 
 	emergencyStep = () => {
 		const {step} = this.state
 		this.setState({
-			step: 10
+			step: 99
+		})
+	}
+
+	pumStep = () => {
+		const {step} = this.state
+		this.setState({
+			step: 97
+		})
+	}
+
+	noTestStep = () => {
+		const {step} = this.state
+		this.setState({
+			step: 96
+		})
+	}
+
+	noTestWithSymptomsStep = () => {
+		const {step} = this.state
+		this.setState({
+			step: 95
+		})
+	}
+
+	closeContactStep = () => {
+		const {step} = this.state
+		this.setState({
+			step: 6
+		})
+	}
+
+	preexistingIllnessStep = () => {
+		const {step} = this.state
+		this.setState({
+			step: 5
+		})
+	}
+
+	exposureDurationStep = () => {
+		const {step} = this.state
+		this.setState({
+			step: 4
+		})
+	}
+
+	exposureStep = () => {
+		const {step} = this.state
+		this.setState({
+			step: 3
+		})
+	}
+
+	travelHistoryStep = () => {
+		const {step} = this.state
+		this.setState({
+			step: 2
 		})
 	}
 
@@ -64,8 +122,8 @@ class MainForm extends Component {
 
 	render() {
 		const {step} = this.state;
-		const {firstName, lastName, email, age, city, country} = this.state;
-		const values = {firstName, lastName, email, age, city, country};
+		const {hasSymptoms, hasTravel} = this.state;
+		const values = {hasSymptoms, hasTravel};
 		switch (step) {
 			case 0:
 				return <StepZero
@@ -74,59 +132,59 @@ class MainForm extends Component {
 				/>
 			case 1:
 				return <StepOne
-					nextStep={this.nextStep}
-					emergencyStep={this.emergencyStep}
-					handleChange={this.handleChange}
+					yesStep={this.exposureStep}
+					noStep={this.travelHistoryStep}
 					values={values}
 				/>
 			case 2:
 				return <StepTwo
-					nextStep={this.nextStep}
-					emergencyStep={this.emergencyStep}
-					prevStep={this.prevStep}
-					handleChange={this.handleChange}
+					yesStep={this.pumStep}
+					noStep={this.noTestStep}
+					back={this.prevStep}
 					values={values}
 				/>
-			case 3:
+			case 3: // exposure step
 				return <StepThree
-					nextStep={this.nextStep}
-					prevStep={this.prevStep}
-					emergencyStep={this.emergencyStep}
+					yesStep={this.emergencyStep}
+					noStep={this.exposureDurationStep}
+					back={this.prevStep}
 					values={values}
 				/>
-			case 4:
+			case 4: // exposure duration step
 				return <StepFour
-					nextStep={this.nextStep}
-					prevStep={this.prevStep}
-					emergencyStep={this.emergencyStep}
+					yesStep={this.emergencyStep}
+					noStep={this.preexistingIllnessStep}
+					back={this.prevStep}
 					values={values}
 				/>
-			case 5:
+			case 5: // pre-existing illness
 				return <StepFive
-					nextStep={this.nextStep}
-					prevStep={this.prevStep}
-					emergencyStep={this.emergencyStep}
+					yesStep={this.emergencyStep}
+					noStep={this.closeContactStep}
+					back={this.prevStep}
 					values={values}
 				/>
-			case 6:
+			case 6: // close-contact
 				return <StepSix
-					nextStep={this.nextStep}
-					prevStep={this.prevStep}
-					emergencyStep={this.emergencyStep}
+					yesStep={this.emergencyStep}
+					noStep={this.noTestWithSymptomsStep}
+					back={this.prevStep}
 					values={values}
 				/>
-			case 8:
-				return <Success/>
-			case 9:
+			case 95:
+				return <NoTestWithSymptoms next={this.initialState}/>
+			case 96:
+				return <NoTest next={this.initialState}/>
+			case 97:
+				return <PersonUnderMonitoring next={this.initialState}/>
+			case 98:
 				return <ContactPage
 					next={this.contactPage}
 				/>
-			case 10:
-				return <Emergency
-					next={this.initialState}
-				/>
+			case 99:
+				return <Emergency next={this.initialState}/>
 			default:
-				return <Emergency/>
+				return <Emergency next={this.initialState}/>
 		}
 	}
 }
