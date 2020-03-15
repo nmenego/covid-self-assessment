@@ -1,11 +1,17 @@
 // StepTwo
 import React, {Component} from 'react';
-import {Button, Form} from 'semantic-ui-react';
+import {Button} from 'semantic-ui-react';
 
 class StepTwo extends Component {
-	continue = (e) => {
-		e.preventDefault();
-		this.props.nextStep();
+
+	yesStep = (e) => {
+		e.preventDefault()
+		this.props.yesStep()
+	}
+
+	noStep = (e) => {
+		e.preventDefault()
+		this.props.noStep()
 	}
 
 	back = (e) => {
@@ -14,21 +20,14 @@ class StepTwo extends Component {
 	}
 
 	render() {
-		const {values} = this.props
 		return (
-			<Form color='blue'>
-				<h1 className="ui centered">Are you experiencing any of the following:</h1>
-				<ul>
-					<li>short of breath at rest</li>
-					<li>inability to lie down because of difficulty breathing</li>
-					<li>chronic health conditions that you are having difficulty managing because of your current
-						respiratory illness
-					</li>
-				</ul>
-				<Button onClick={this.continue}>No</Button>
-				<Button onClick={this.yesEmergency}>Yes</Button>
+			<div color='blue'>
+				<h1 className="ui centered">Have you travelled outside the country or to provinces that have confirmed COVID-19 cases?</h1>
+				<h2>Travel includes passing through an airport.</h2>
+				<Button onClick={this.noStep}>No</Button>
+				<Button onClick={this.yesStep}>Yes</Button>
 				<Button onClick={this.back}>Back</Button>
-			</Form>
+			</div>
 		)
 	}
 }

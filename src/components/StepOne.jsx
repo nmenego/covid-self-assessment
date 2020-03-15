@@ -1,23 +1,22 @@
 // StepOne.jsx
 import React, {Component} from 'react';
-import {Button, Form} from 'semantic-ui-react';
+import {Button} from 'semantic-ui-react';
 
 class StepOne extends Component {
 
 	yesStep = (e) => {
 		e.preventDefault()
-		this.props.emergencyStep()
+		this.props.yesStep()
 	}
 
 	noStep = (e) => {
 		e.preventDefault()
-		this.props.nextStep()
+		this.props.noStep()
 	}
 
 	render() {
-		const {values} = this.props;
 		return (
-			<Form>
+			<div>
 				<h1 className="ui centered">Are you experiencing any of the following:</h1>
 				{/*<Form.Field>*/}
 				{/*	<input*/}
@@ -28,15 +27,14 @@ class StepOne extends Component {
 				{/*	<label>severe difficulty breathing (e.g., struggling for each breath, speaking in single words)</label>*/}
 				{/*</Form.Field>*/}
 				<ul>
-					<li>severe difficulty breathing (e.g., struggling for each breath, speaking in single words)</li>
-					<li>severe chest pain</li>
-					<li>having a very hard time waking up</li>
-					<li>feeling confused</li>
-					<li>lost consciousness</li>
+					<li>Fever</li>
+					<li>Cough</li>
+					<li>Shortness of breath or difficulty breathing</li>
+					<li>Diarrhea</li>
 				</ul>
 				<Button onClick={this.noStep}>No</Button>
 				<Button onClick={this.yesStep}>Yes</Button>
-			</Form>
+			</div>
 		)
 	}
 }

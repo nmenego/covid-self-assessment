@@ -20,7 +20,7 @@ class Emergency extends Component {
 					<li>Don’t share personal items like dishes, utensils, and towels and wash your hands often.</li>
 					<li>Avoid touching your face as much as possible.</li>
 				</ul>
-				<Button onClick={this.next}>Yes</Button>
+				<Button onClick={this.next}>Restart Assessment</Button>
 			</div>
 		)
 	}
