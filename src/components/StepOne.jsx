@@ -4,7 +4,12 @@ import {Button, Form} from 'semantic-ui-react';
 
 class StepOne extends Component {
 
-	saveAndContinue = (e) => {
+	yesEmergency = (e) => {
+		e.preventDefault()
+		this.props.emergencyStep()
+	}
+
+	continue = (e) => {
 		e.preventDefault()
 		this.props.nextStep()
 	}
@@ -13,35 +18,24 @@ class StepOne extends Component {
 		const {values} = this.props;
 		return (
 			<Form>
-				<h1 className="ui centered">Enter User Details</h1>
-				<Form.Field>
-					<input
-						type='checkbox'
-						placeholder='First Name'
-						onChange={this.props.handleChange('firstName')}
-						defaultValue={values.firstName}
-					/>
-					<label>Symptom 1</label>
-				</Form.Field>
-				<Form.Field>
-					<input
-						type='checkbox'
-						placeholder='Last Name'
-						onChange={this.props.handleChange('lastName')}
-						defaultValue={values.lastName}
-					/>
-					<label>Symptom 2</label>
-				</Form.Field>
-				<Form.Field>
-					<input
-						type='checkbox'
-						placeholder='Email Address'
-						onChange={this.props.handleChange('email')}
-						defaultValue={values.email}
-					/>
-					<label>Symptom 3</label>
-				</Form.Field>
-				<Button onClick={this.saveAndContinue}>Next</Button>
+				<h1 className="ui centered">Are you experiencing any of the following:</h1>
+				{/*<Form.Field>*/}
+				{/*	<input*/}
+				{/*		type='checkbox'*/}
+				{/*		onChange={this.props.handleChange('firstName')}*/}
+				{/*		defaultValue={values.firstName}*/}
+				{/*	/>*/}
+				{/*	<label>severe difficulty breathing (e.g., struggling for each breath, speaking in single words)</label>*/}
+				{/*</Form.Field>*/}
+				<ul>
+					<li>severe difficulty breathing (e.g., struggling for each breath, speaking in single words)</li>
+					<li>severe chest pain</li>
+					<li>having a very hard time waking up</li>
+					<li>feeling confused</li>
+					<li>lost consciousness</li>
+				</ul>
+				<Button onClick={this.continue}>No</Button>
+				<Button onClick={this.yesEmergency}>Yes</Button>
 			</Form>
 		)
 	}
