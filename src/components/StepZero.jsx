@@ -13,7 +13,7 @@ class StepZero extends Component {
 		const { values } = this.props;
 		return (
 			<Form>
-				<div className="col-10 offset-1">
+				<div className="col-sm-12 col-md-10 offset-md-1">
 					<h1 className="text-center mt-5 mb-4">COVID-19 Self-Assessment</h1>
 					<br/>
 					<p>
@@ -26,35 +26,35 @@ class StepZero extends Component {
 						To protect yourself while out in public, wash your hands frequently, and maintain a distance of about 2 metres from others.
 					</p>
 					<div className="my-5 text-center">
-						<Button onClick={this.nextStep} className="btn btn-primary btn-lg">Launch Self-Assessment</Button>
-						<p className="mt-3">This is also available in <a href="#">Tagalog</a>, more local dialects will be available soon.</p>
+						<Button onClick={this.nextStep} className="btn btn-primary btn-lg" role="button">Launch Self-Assessment</Button>
+						<p className="mt-3">This is also available in <a href="#" role="link">Tagalog</a>, more local dialects will be available soon.</p>
 					</div>
 					<p>
 						If you have no symptoms or exposure concerns, but have questions about COVID-19 or novel coronavirus, please visit the following resources:
 					</p>
 						<ul>
 							<li>
-								<a href="https://www.doh.gov.ph/2019-nCoV">https://www.doh.gov.ph/2019-nCoV</a> – Learn about COVID-19 and actions being taken to protect the health of Filipinos
+								<a href="https://www.doh.gov.ph/2019-nCoV" role="link">https://www.doh.gov.ph/2019-nCoV</a> – Learn about COVID-19 and actions being taken to protect the health of Filipinos
 							</li>
 							<li>
 								Department of Health’s official social media pages
 								<ul>
 									<li>
-										<a href="https://www.facebook.com/OfficialDOHgov">https://www.facebook.com/OfficialDOHgov</a>
+										<a href="https://www.facebook.com/OfficialDOHgov" role="link">https://www.facebook.com/OfficialDOHgov</a>
 									</li>
 									<li>
-										<a href="https://twitter.com/DOHgovph">https://twitter.com/DOHgovph</a>
+										<a href="https://twitter.com/DOHgovph" role="link">https://twitter.com/DOHgovph</a>
 									</li>
 									<li>
-										<a href="http://bit.ly/DOHPhCOVID-19">Viber</a>
+										<a href="http://bit.ly/DOHPhCOVID-19" role="link">Viber</a>
 									</li>
 								</ul>
 							</li>
 							<li>
-								<a href="https://www.doh.gov.ph/2019-nCoV">https://www.doh.gov.ph/2019-nCoV</a> – Learn about COVID-19 and actions being taken to protect the health of Filipinos
+								<a href="https://www.doh.gov.ph/2019-nCoV" role="link">https://www.doh.gov.ph/2019-nCoV</a> – Learn about COVID-19 and actions being taken to protect the health of Filipinos
 							</li>
 							<li>
-								<a href="#">Frequently Asked Questions</a>
+								<a href="#" role="link">Frequently Asked Questions</a>
 							</li>
 						</ul>
 					<br/>

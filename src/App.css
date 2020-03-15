@@ -21,6 +21,11 @@ a:hover {
   text-decoration: underline;
 }
 
+.btn {
+  font-size: 20px;
+  font-weight: 700;
+}
+
 .btn-primary {
   color: #FFF;
   padding: 16px 32px;
@@ -29,6 +34,21 @@ a:hover {
 
 .btn-primary:hover {
   color: #FFF;
+  padding: 16px 32px;
+  background-color: #003FC9;
+}
+
+.btn-secondary {
+  border-color: #003FC9;
+  border-width: 2px;
+  padding: 16px 32px;
+  color: #033092;
+}
+
+.btn-secondary:hover {
+  color: #FFF;
+  border-color: #003FC9;
+  border-width: 2px;
   padding: 16px 32px;
   background-color: #003FC9;
 }
@@ -72,6 +92,36 @@ a:hover {
   }
 }
 
+#root {
+  min-height: calc(100vh - 160px);
+}
+
+.progress-status .prog {
+  width: 64px;
+  border-radius: 4px;
+  height: 6px;
+  margin: 8px;
+  display: inline-block;
+}
+
+.progress-status .prog-filled {
+  background-color: #033092;
+}
+
+.progress-status .prog-empty {
+  background-color: #033092;
+  opacity: .3;
+}
+
+.question-text {
+  font-size: 28px;
+  margin-bottom: 24px;
+}
+
+.question-ul {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
 
 /** Footer **/
 .page-footer {
