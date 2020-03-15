@@ -32,7 +32,7 @@ class MainForm extends Component {
 		})
 	}
 
-	contactPage = () => {
+	contactPageStep = () => {
 		const {step} = this.state
 		this.setState({
 			step: 98
@@ -179,12 +179,12 @@ class MainForm extends Component {
 				return <PersonUnderMonitoring next={this.initialState}/>
 			case 98:
 				return <ContactPage
-					next={this.contactPage}
+					next={this.initialState}
 				/>
 			case 99:
-				return <Emergency next={this.initialState}/>
+				return <Emergency next={this.initialState} contactDetails={this.contactPageStep}/>
 			default:
-				return <Emergency next={this.initialState}/>
+				return <Emergency next={this.initialState} contactDetails={this.contactPageStep}/>
 		}
 	}
 }
