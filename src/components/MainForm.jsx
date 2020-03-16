@@ -121,6 +121,7 @@ class MainForm extends Component {
 	}
 
 	render() {
+		// TODO: as of the moment this is REALLY messy. we need to fix handling of states and steps
 		const {step} = this.state;
 		const {hasSymptoms, hasTravel} = this.state;
 		const values = {hasSymptoms, hasTravel};
@@ -136,35 +137,35 @@ class MainForm extends Component {
 					noStep={this.travelHistoryStep}
 					values={values}
 				/>
-			case 2:
+			case 2: // 2.0 travel history step
 				return <StepTwo
 					yesStep={this.pumStep}
 					noStep={this.noTestStep}
 					back={this.prevStep}
 					values={values}
 				/>
-			case 3: // exposure step
+			case 3: // 2.1 exposure step
 				return <StepThree
-					yesStep={this.emergencyStep}
+					yesStep={this.exposureDurationStep}
 					noStep={this.exposureDurationStep}
 					back={this.prevStep}
 					values={values}
 				/>
-			case 4: // exposure duration step
+			case 4: // 3.0 exposure duration step
 				return <StepFour
 					yesStep={this.emergencyStep}
 					noStep={this.preexistingIllnessStep}
 					back={this.prevStep}
 					values={values}
 				/>
-			case 5: // pre-existing illness
+			case 5: // 3.1 pre-existing illness
 				return <StepFive
 					yesStep={this.emergencyStep}
 					noStep={this.closeContactStep}
 					back={this.prevStep}
 					values={values}
 				/>
-			case 6: // close-contact
+			case 6: // 3.2close-contact
 				return <StepSix
 					yesStep={this.emergencyStep}
 					noStep={this.noTestWithSymptomsStep}
