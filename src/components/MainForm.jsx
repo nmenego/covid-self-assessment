@@ -128,6 +128,7 @@ class MainForm extends Component {
 		switch (step) {
 			case 0:
 				return <StepZero
+          changeLocale={this.props.changeLocale}
 					nextStep={this.nextStep}
 					values={values}
 				/>
