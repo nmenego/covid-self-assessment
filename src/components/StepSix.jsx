@@ -38,7 +38,7 @@ class StepSix extends Component {
 					Have been in close contact with anyone who has respiratory illness in the
 					past 14 days?
 				</p>
-				<p className="question-text">
+				<p className="question-text-small">
 				A close contact is defined as a person who:
 				</p>
 				<ul className="question-ul" role="list">
