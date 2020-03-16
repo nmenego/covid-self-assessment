@@ -34,8 +34,7 @@ class StepFour extends Component {
 					<div className="prog prog-empty"></div>
 				</div> */}
 				<p className="question-text">
-					Did you experience these symptoms in the past 14 days after traveling /
-					exposure?
+					Did you experience any of the following symptoms in the past 14 days after traveling/exposure?
 				</p>
 
 				<ul className="question-ul" role="list">
@@ -54,7 +53,8 @@ class StepFour extends Component {
 								role="button">YES</Button>
 					</div>
 					<div className="col-sm-12 mt-5 pt-5 text-center btn-back">
-						<Button onClick={this.back} className="btn btn-secondary btn-lg" role="button">Previous Question</Button>
+						<Button onClick={this.back} className="btn btn-secondary btn-lg" role="button">Previous
+							Question</Button>
 					</div>
 				</div>
 			</div>
