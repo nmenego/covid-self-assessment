@@ -5,7 +5,7 @@ html, body {
 
 h1, h2, h3, h4, h5 {
   font-family: 'Playfair Display', serif;
-  color: #173092;
+  color: #033092;
 }
 
 p, a, li {
@@ -15,10 +15,12 @@ p, a, li {
 
 a {
   font-weight: 700;
-  color: #173092;
+  color: #033092;
+  text-decoration: underline;
 }
 a:hover {
   text-decoration: underline;
+  color: #003FC9;
 }
 
 .navbar {
@@ -131,6 +133,19 @@ a:hover {
   font-size: 20px;
   margin-bottom: 16px;
 }
+
+/** FAQ **/
+.card-light-blue {
+  background: rgba(3, 48, 146, 0.05);
+  border-radius: 4px;
+}
+
+.faq-question {
+  font-weight: 700;
+  color: #292929; 
+  font-size: 20px;
+}
+
 
 /** Footer **/
 .page-footer {

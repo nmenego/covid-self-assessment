@@ -20,10 +20,19 @@ class ContactPage extends Component {
 				</p>
 				
 				<div className="row">
-					<div className="my-3">
-						<div className="contact-group">
-							<h3 className="group-category">National Helplines</h3>
-							<div className="contact-details">
+					<div className="contact-group col-sm-12 col-md-12 my-5">
+						<h3 className="group-category mb-4">National Helplines</h3>
+						{/* Start of Row */}
+						<div className="row">
+							<div className="contact-details my-3 col-sm-12 col-md-6">
+								<p className="contact-name">
+									<strong>Department of Health - Philippines</strong>
+								</p>
+								<p className="contact-numbers">
+									(02)8-651-7800 loc 1149-1150
+								</p>
+							</div>
+							<div className="contact-details my-3 col-sm-12 col-md-6">
 								<p className="contact-name">
 									<strong>Department of Health - Philippines</strong>
 								</p>
@@ -32,6 +41,27 @@ class ContactPage extends Component {
 								</p>
 							</div>
 						</div>
+						{/* End of Row */}
+						{/* Start of Row */}
+						<div className="row">
+							<div className="contact-details my-3 col-sm-12 col-md-6">
+								<p className="contact-name">
+									<strong>Department of Health - Philippines</strong>
+								</p>
+								<p className="contact-numbers">
+									(02)8-651-7800 loc 1149-1150
+								</p>
+							</div>
+							<div className="contact-details my-3 col-sm-12 col-md-6">
+								<p className="contact-name">
+									<strong>Department of Health - Philippines</strong>
+								</p>
+								<p className="contact-numbers">
+									(02)8-651-7800 loc 1149-1150
+								</p>
+							</div>
+						</div>
+						{/* End of Row */}
 					</div>
 				</div>
 
