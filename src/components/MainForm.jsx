@@ -10,6 +10,7 @@ import StepSix from "./StepSix";
 import PersonUnderMonitoring from './PersonUnderMonitoring';
 import Emergency from './Emergency';
 import ContactPage from "./ContactPage";
+import FAQPage from "./FAQPage";
 import NoTest from "./NoTest";
 import NoTestWithSymptoms from "./NoTestWithSymptoms";
 
@@ -36,6 +37,13 @@ class MainForm extends Component {
 		const {step} = this.state
 		this.setState({
 			step: 98
+		})
+	}
+
+	faqPageStep = () => {
+		const {step} = this.state
+		this.setState({
+			step: 94
 		})
 	}
 
@@ -130,6 +138,8 @@ class MainForm extends Component {
 				return <StepZero
 					nextStep={this.nextStep}
 					values={values}
+					faqPage={this.faqPageStep}
+					contactPage={this.contactPageStep}
 				/>
 			case 1:
 				return <StepOne
@@ -172,6 +182,8 @@ class MainForm extends Component {
 					back={this.prevStep}
 					values={values}
 				/>
+			case 94:
+				return <FAQPage next={this.initialState}/>
 			case 95:
 				return <NoTestWithSymptoms next={this.initialState}/>
 			case 96:

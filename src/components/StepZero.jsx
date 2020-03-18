@@ -9,6 +9,16 @@ class StepZero extends Component {
 		this.props.nextStep()
 	}
 
+	faqPage = (e) => {
+		e.preventDefault()
+		this.props.faqPage()
+	}
+
+	contactPage = (e) => {
+		e.preventDefault()
+		this.props.contactPage()
+	}
+
 	render() {
 		const {values} = this.props;
 		return (
@@ -54,7 +64,8 @@ class StepZero extends Component {
 								<li><a href="http://bit.ly/DOHPhCOVID-19" role="link">Viber</a></li>
 							</ul>
 						</li>
-						<li><a href="#">Frequently Asked Questions</a></li>
+						<li><a href="#" onClick={this.faqPage} role="link">Frequently Asked Questions</a></li>
+						<li><a href="#" onClick={this.contactPage} role="link">Hotline Directory</a></li>
 					</ul>
 				</div>
 				<br/>
