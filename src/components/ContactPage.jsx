@@ -148,6 +148,16 @@ class ContactPage extends Component {
 									(082) 326 5386
 								</p>
 							</div>
+							<div className="contact-details my-3 col-sm-12 col-md-6">
+								<p className="contact-name mb-2">
+									<strong>Zamboanga City</strong>
+								</p>
+								<p className="contact-numbers">
+									(62) 955 9601
+									<br/>
+									0966 175 4298
+								</p>
+							</div>
 						</div>
 						{/* End of Row */}
 					</div>
