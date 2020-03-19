@@ -27,6 +27,16 @@ a:hover {
   border-bottom: 1px solid #d9d9d9;
 }
 
+.navbar-light .navbar-nav .nav-link {
+  color: #033092;
+  text-decoration: none;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #003FC9;
+  text-decoration: underline;
+}
+
 .btn {
   font-size: 20px;
   font-weight: 700;
@@ -146,6 +156,12 @@ a:hover {
   font-size: 20px;
 }
 
+.contact-name {
+  font-size: 20px;
+}
+.contact-numbers {
+  letter-spacing: 1px;
+}
 
 /** Footer **/
 .page-footer {
@@ -160,6 +176,7 @@ a:hover {
 .footer-link {
   color: #FFF;
   font-size: 14px;
+  text-decoration: none;
 }
 
 .footer-link:hover {

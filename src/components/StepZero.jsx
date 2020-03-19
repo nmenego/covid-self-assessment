@@ -9,6 +9,16 @@ class StepZero extends Component {
 		this.props.nextStep()
 	}
 
+	faqPage = (e) => {
+		e.preventDefault()
+		this.props.faqPage()
+	}
+
+	contactPage = (e) => {
+		e.preventDefault()
+		this.props.contactPage()
+	}
+
 	render() {
 		const {values} = this.props;
 		return (
@@ -17,27 +27,22 @@ class StepZero extends Component {
 				<h1 className="text-center mt-5 mb-4">COVID-19 Self-Assessment</h1>
 				<br/>
 				<p>
-					Check if you need to be tested for COVID-19. You can also help others use this tool if they are
-					not able
+					Do you need to be tested for COVID-19 (also known as novel coronavirus)?
 				</p>
 				<p>
-					DOH strongly urges anyone who has symptoms, including a cough, runny nose, fever or sore throat,
-					to self-isolate for 14 days.
+					If you have fever, cough, runny nose, or sore throat, the Department of Health (DOH) encourages you to self-isolate for 14 days. 
 				</p>
 				<p>
-					To protect yourself while out in public, wash your hands frequently, and maintain a distance of
-					about 2 metres from others.
+					If you have to go out, wash your hands frequently and keep a distance of 2 metres from others (social distancing).
 				</p>
 				<div className="my-5 text-center">
-					<Button onClick={this.nextStep} className="btn btn-primary btn-lg" role="button">Launch
+					<Button onClick={this.nextStep} className="btn btn-primary btn-lg" role="button">Start the
 						Self-Assessment</Button>
 					<p className="mt-3">This is also available in <a href="#" role="link">Tagalog</a>, more regional
 						languages will be available soon.</p>
 				</div>
 				<div>
-					<p>If you have no symptoms or exposure concerns, but have questions about COVID-19 or novel
-						coronavirus,
-						please visit the following resources:</p>
+					<p>For more information about COVID-19 or novel coronavirus, visit the following:</p>
 					<ul>
 						<li><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" role="link">World Health
 							Organization</a> – World Health
@@ -54,7 +59,8 @@ class StepZero extends Component {
 								<li><a href="http://bit.ly/DOHPhCOVID-19" role="link">Viber</a></li>
 							</ul>
 						</li>
-						<li><a href="#">Frequently Asked Questions</a></li>
+						<li><a href="#" onClick={this.faqPage} role="link">Frequently Asked Questions</a></li>
+						<li><a href="#" onClick={this.contactPage} role="link">Hotline Directory</a></li>
 					</ul>
 				</div>
 				<br/>
