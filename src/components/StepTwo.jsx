@@ -34,6 +34,7 @@ class StepTwo extends Component {
 					COVID-19 cases?
 				</p>
 				<p className="question-text-small">Travel includes passing through an airport.</p>
+				<p className="question-text-small">More information on <a href="https://www.worldometers.info/coronavirus/">countries affected by COVID-19</a></p>
 				<div className="row mt-5">
 					<div className="col-sm-12 col-md-6 my-2">
 						<Button onClick={this.noStep} className="btn btn-primary btn-lg btn-block"

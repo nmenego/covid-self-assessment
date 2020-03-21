@@ -37,6 +37,7 @@ class StepThree extends Component {
 					<li>Working together or staying in the same close environment of a COVID-19</li>
 					<li>Traveling together with COVID-19 patient in any kind of conveyance</li>
 					<li>Living in the same household as a COVID-19 patient</li>
+					<li>Health worker in a facility where a COVID-19 patient was managed</li>
 				</ul>
 				<div className="row mt-5">
 					<div className="col-sm-12 col-md-6 my-2">
