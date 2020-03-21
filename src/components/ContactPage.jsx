@@ -1,13 +1,6 @@
-// ContactPage.jsx
 import React, {Component} from 'react';
-import {Button} from "semantic-ui-react";
 
 class ContactPage extends Component {
-
-	next = (e) => {
-		e.preventDefault()
-		this.props.next()
-	}
 
 	render() {
 		return (

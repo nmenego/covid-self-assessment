@@ -1,16 +1,9 @@
-// Emergency.jsx
 import React, {Component} from 'react';
 import {Button} from "semantic-ui-react";
 
 class Emergency extends Component {
-
-	contactDetails = (e) => {
-		e.preventDefault()
-		this.props.contactDetails()
-	}
-
 	next = (e) => {
-		e.preventDefault()
+		e.preventDefault();
 		this.props.next()
 	}
 
@@ -25,6 +18,7 @@ class Emergency extends Component {
 				</p>
 				<p>
 					[This part is under construction, please contact DOH directly below.]
+					<li><a href="/contact" role="link">Hotline Directory</a></li>
 				</p>
 
 				<div className="my-5 text-center">
