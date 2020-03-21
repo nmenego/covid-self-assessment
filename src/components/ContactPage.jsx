@@ -1,8 +1,12 @@
 import React, {Component} from 'react';
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-160601011-1');
 
 class ContactPage extends Component {
 
 	render() {
+		ReactGA.pageview(window.location.pathname + window.location.search);
 		return (
 			<div className="col-sm-12 col-md-10 offset-md-1">
 				<h1 className="text-center mt-5 mb-4">Emergency Hotlines, Hospitals, and LGUs</h1>

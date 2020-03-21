@@ -1,14 +1,13 @@
 import React, {Component} from 'react';
 import {Button} from "semantic-ui-react";
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-160601011-1');
 
 class FAQPage extends Component {
 
-	next = (e) => {
-		e.preventDefault()
-		this.props.next()
-	}
-
 	render() {
+		ReactGA.pageview(window.location.pathname + window.location.search);
 		return (
 			<div className="col-sm-12 col-md-10 offset-md-1">
 				<h1 className="text-center mt-5 mb-4">Frequently Asked Questions</h1>

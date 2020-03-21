@@ -7,14 +7,10 @@ import Error404 from "./components/Error404";
 import FAQPage from "./components/FAQPage";
 import ContactPage from "./components/ContactPage";
 import {Container} from 'semantic-ui-react';
-import ReactGA from 'react-ga';
-
-ReactGA.initialize('UA-160601011-1');
 
 class App extends Component {
 
 	render() {
-		ReactGA.pageview(window.location.pathname + window.location.search);
 		return (
 			<BrowserRouter>
 				<Container textAlign='center'>

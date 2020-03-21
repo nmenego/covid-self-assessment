@@ -7,7 +7,9 @@ import PersonUnderMonitoring from './PersonUnderMonitoring';
 import Emergency from './Emergency';
 import NoTest from "./NoTest";
 import NoTestWithSymptoms from "./NoTestWithSymptoms";
+import ReactGA from 'react-ga';
 
+ReactGA.initialize('UA-160601011-1');
 
 class MainForm extends Component {
 	state = {
@@ -47,6 +49,7 @@ class MainForm extends Component {
 	};
 
 	render() {
+		ReactGA.pageview(window.location.pathname + window.location.search);
 		const {step, hasExposure, hasSymptoms, hasTravel} = this.state;
 		switch (step) {
 			case 0:
@@ -77,20 +80,36 @@ class MainForm extends Component {
 				if ((hasSymptoms && hasTravel && hasExposure) ||
 					(hasSymptoms && hasTravel && !hasExposure) ||
 					(hasSymptoms && !hasTravel && hasExposure)) {
+					ReactGA.event({
+						category: 'Result',
+						action: 'Person under investigation'
+					});
 					return <Emergency next={this.initialState}/>
 				}
 				// appropriate treatment
 				else if ((hasSymptoms && !hasTravel && !hasExposure)) {
+					ReactGA.event({
+						category: 'Result',
+						action: 'No test needed, but with symptoms'
+					});
 					return <NoTestWithSymptoms next={this.initialState}/>
 				}
-				// person under monitorint (PUM)
+				// person under monitoring (PUM)
 				else if ((!hasSymptoms && hasTravel && hasExposure) ||
 					(!hasSymptoms && hasTravel && !hasExposure) ||
 					(!hasSymptoms && !hasTravel && hasExposure)) {
+					ReactGA.event({
+						category: 'Result',
+						action: 'Person under monitoring'
+					});
 					return <PersonUnderMonitoring next={this.initialState}/>
 				}
 				// no immediate medical action
 				else {
+					ReactGA.event({
+						category: 'Result',
+						action: 'No action needed'
+					});
 					return <NoTest next={this.initialState}/>
 				}
 			default:
