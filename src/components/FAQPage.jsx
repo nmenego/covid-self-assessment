@@ -1,4 +1,3 @@
-// FAQPage.jsx
 import React, {Component} from 'react';
 import {Button} from "semantic-ui-react";
 
@@ -16,18 +15,11 @@ class FAQPage extends Component {
 				<br/>
 				<p>
 					This page will constantly be updated as we get more information from Health Authorities, and Government Departments. If you have questions or are experiencing symptons,
-					please contact your local health authority as soon as possible. We made a <a href="#" role="link">list</a> of emergency hotlines, local hospitals and LGUs.
+					please contact your local health authority as soon as possible. We made a <a href="/contact" role="link">list</a> of emergency hotlines, local hospitals and LGUs.
 				</p>
 				<p>	
-					If you’re unsure about your symptons, you can use our Self-Assessment app and take precautionary actions.
+					If you’re unsure about your symptons, you can use our <a href="/">Self-Assessment app</a> and take precautionary actions.
 				</p>
-				
-				<div className="my-5 text-center">
-					<Button onClick={this.nextStep} className="btn btn-primary btn-lg" role="button">Launch
-						Self-Assessment</Button>
-					<p className="mt-3">This is also available in <a href="#" role="link">Tagalog</a>, more regional
-						languages will be available soon.</p>
-				</div>
 
 				{/* <div className="row">
 					<div className="col-sm-12 col-md-12 my-5">

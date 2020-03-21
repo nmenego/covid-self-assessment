@@ -1,23 +1,19 @@
-// StepTwo
 import React, {Component} from 'react';
 import {Button} from 'semantic-ui-react';
 
 class StepTwo extends Component {
 
 	yesStep = (e) => {
-		e.preventDefault()
-		this.props.yesStep()
-	}
+		e.preventDefault();
+		this.props.handleChange('hasTravel', true);
+		this.props.nextStep();
+	};
 
 	noStep = (e) => {
-		e.preventDefault()
-		this.props.noStep()
-	}
-
-	back = (e) => {
 		e.preventDefault();
-		this.props.back();
-	}
+		this.props.handleChange('hasTravel', false);
+		this.props.nextStep();
+	};
 
 	render() {
 		return (
@@ -48,7 +44,7 @@ class StepTwo extends Component {
 								role="button">YES</Button>
 					</div>
 					<div className="col-sm-12 mt-5 pt-5 text-center btn-back">
-						<Button onClick={this.back} className="btn btn-secondary btn-lg" role="button">Previous Question</Button>
+						<Button onClick={this.props.prevStep} className="btn btn-secondary btn-lg" role="button">Previous Question</Button>
 					</div>
 				</div>
 			</div>

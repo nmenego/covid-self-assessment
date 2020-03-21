@@ -1,12 +1,7 @@
-// NoTest.jsx
 import React, {Component} from 'react';
 import {Button} from "semantic-ui-react";
 
 class NoTest extends Component {
-	next = (e) => {
-		e.preventDefault()
-		this.props.next()
-	}
 
 	render() {
 		return (
@@ -16,7 +11,7 @@ class NoTest extends Component {
 				<p>Please go to the correct clinic if you have other symptoms.</p>
 
 				<div className="my-5 text-center">
-					<Button onClick={this.next} className="btn btn-primary btn-lg" role="button">Restart
+					<Button onClick={this.props.next} className="btn btn-primary btn-lg" role="button">Restart
 					Assessment</Button>
 				</div>
 			</div>

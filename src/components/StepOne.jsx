@@ -5,14 +5,16 @@ import {Button} from 'semantic-ui-react';
 class StepOne extends Component {
 
 	yesStep = (e) => {
-		e.preventDefault()
-		this.props.yesStep()
-	}
+		e.preventDefault();
+		this.props.handleChange('hasSymptoms', true);
+		this.props.nextStep();
+	};
 
 	noStep = (e) => {
-		e.preventDefault()
-		this.props.noStep()
-	}
+		e.preventDefault();
+		this.props.handleChange('hasSymptoms', false);
+		this.props.nextStep();
+	};
 
 	render() {
 		return (
